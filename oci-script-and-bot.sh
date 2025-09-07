@@ -682,7 +682,7 @@ function tryLaunchInstance(interaction = null, manual = false) {
   
   // config.json 기반 OCI 명령어 구성
   const bootArg = (ociConfig.bootVolumeConfig && ociConfig.bootVolumeConfig.sizeInGBs)
-    ? ` --source-boot-volume-size-in-gbs ${ociConfig.bootVolumeConfig.sizeInGBs}`
+    ? ` --boot-volume-size-in-gbs ${ociConfig.bootVolumeConfig.sizeInGBs}`
     : '';
 
   const ociCommand = [
@@ -1494,3 +1494,4 @@ echo "  tail -f oci_bot.log          # 봇 활동 로그 확인"
 
 echo ""
 log success "✅ 설정 완료! Discord에서 봇을 사용해보세요."
+
